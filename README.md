@@ -1,4 +1,4 @@
-# Abdulmajeed J. Alotaibi · Industrial Engineering Portfolio
+# Abdulmajeed A. Alotaibi · Industrial Engineering Portfolio
 
 Live site: https://aa-alotaibi.github.io/
 
