@@ -1,21 +1,28 @@
-# Abdulmajeed A. Alotaibi · Portfolio
+# Abdulmajeed J. Alotaibi · Industrial Engineering Portfolio
 
-Personal portfolio of an industrial engineer: real plant data, statistical evidence and validated simulation.
+Live site: https://aa-alotaibi.github.io/
 
-Live site: https://amjaalotaibi.github.io/
+Static site (HTML, CSS and a small JavaScript file) served by GitHub Pages from the root of the `main` branch.
 
 ## Structure
+
 ```
-index.html                     Home: about, selected work, skills, certifications, contact
-style.css                      Shared styles (one design for every page)
-projects/heavy-clay/           Project 1: From Downtime to Decisions
-  index.html                   Case study page
-  img/                         Dashboard pages, thumbnails, covers
-  media/simulation.mp4         Simio simulation walkthrough
-  files/                       Report PDF, dashboard PDF
+index.html                     Home page (hero, selected work, skills, about, contact)
+.nojekyll                      Tells GitHub Pages to serve the files as they are
+assets/
+  css/style.css                Shared styles (primary colour: --primary #0F766E)
+  js/site.js                   Mobile menu, scroll-spy, dashboard viewer
+  img/                         Profile photo and favicons
+projects/
+  heavy-clay/
+    index.html                 Case study: From Downtime to Decisions
+    img/                       Simio images, dashboard pages, report cover
+    media/simulation.mp4       Simio walkthrough video
+    files/                     Report and dashboard PDFs
 ```
 
 ## Adding a project
-1. Copy `projects/heavy-clay/` to `projects/<new-name>/`.
-2. Replace the text, images, video and files.
-3. Add one card in the "Selected work" section of `index.html`.
+
+1. Copy `projects/heavy-clay/` to `projects/<new-slug>/` and replace its content and images.
+2. In the root `index.html`, add another `<a class="card work-card" ...>` block inside the `#work` section.
+3. Keep file names lowercase with hyphens; GitHub Pages paths are case-sensitive.

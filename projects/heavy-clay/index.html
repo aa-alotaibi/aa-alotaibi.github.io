@@ -3,250 +3,318 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>From Downtime to Decisions · Abdulmajeed A. Alotaibi</title>
-<meta name="description" content="A heavy clay brick line after Lean Six Sigma: Power BI analysis of real plant data, a validated Simio model, and a staged reliability plan.">
-<meta property="og:title" content="From Downtime to Decisions">
-<meta property="og:description" content="A heavy clay brick line after Lean Six Sigma, and the question of what to fix next.">
-<meta property="og:image" content="img/dashboard-01-thumb.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F766E'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3EAA%3C/text%3E%3C/svg%3E">
+<title>From Downtime to Decisions | Abdulmajeed J. Alotaibi</title>
+<meta name="description" content="Industrial engineering case study: a heavy clay brick line after Lean Six Sigma. Analysis of real plant data, a validated Simio simulation model, What-If reliability scenarios and a staged improvement plan.">
+<meta name="author" content="Abdulmajeed J. Alotaibi">
+<link rel="canonical" href="https://aa-alotaibi.github.io/projects/heavy-clay/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Abdulmajeed J. Alotaibi | Industrial Engineering Portfolio">
+<meta property="og:title" content="From Downtime to Decisions | Abdulmajeed J. Alotaibi">
+<meta property="og:description" content="A heavy clay brick line after Lean Six Sigma, and the question of what to fix next. Real plant data, a validated Simio model and seven What-If scenarios.">
+<meta property="og:url" content="https://aa-alotaibi.github.io/projects/heavy-clay/">
+<meta property="og:image" content="https://aa-alotaibi.github.io/projects/heavy-clay/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="3D Simio model of a heavy clay brick production line">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0F766E">
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../style.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
 </head>
-<body>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
 
-<nav class="nav pnav" aria-label="Project">
-  <div class="wrap">
-    <a class="back" href="../../#work">← All work</a>
-    <ul>
-      <li><a href="#story">Story</a></li>
-      <li><a href="#dashboard">Dashboard</a></li>
-      <li><a href="#simulation">Video</a></li>
-      <li><a href="#scenarios">Scenarios</a></li>
-      <li><a href="#report">Report</a></li>
-    </ul>
-  </div>
-</nav>
+<aside class="sidebar" id="sidebar" aria-label="Sidebar">
+  <button class="sb-close" type="button" data-close-drawer aria-label="Close menu">Close ✕</button>
+  <a class="sb-id" href="../../index.html" aria-label="Abdulmajeed J. Alotaibi, Industrial Engineering Portfolio: home">
+    <span class="sb-mono" aria-hidden="true">AA</span>
+    <span class="sb-t"><b>Industrial Engineering</b>Portfolio</span>
+  </a>
+  <ul class="sb-nav">
+    <li><a href="../../index.html#work"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>All Work</a></li>
+  </ul>
+  <div class="sb-label">This project</div>
+  <ul class="sb-nav" data-spy>
+    <li><a href="#story"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H3V5Z"/><path d="M21 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7V5Z"/></svg>Project Story</a></li>
+    <li><a href="#dashboard"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M21 20H3"/></svg>Dashboard</a></li>
+    <li><a href="#simulation"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m10 8.5 5 3.5-5 3.5v-7Z"/></svg>Simulation Video</a></li>
+    <li><a href="#scenarios"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>What-If Scenarios</a></li>
+    <li><a href="#report"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Report</a></li>
+  </ul>
+  <div class="sb-foot">Solo project · Manufacturing · 2026</div>
+</aside>
+<div class="scrim" data-close-drawer></div>
 
-<main>
-
-<header class="p-hero">
-  <div class="wrap">
-    <div class="tags">Solo project · Manufacturing · 2026</div>
-    <h1>From Downtime to Decisions</h1>
-    <p class="lead">A heavy clay brick line after Lean Six Sigma, and the question of what to fix next.</p>
-    <div class="btns">
-      <a class="btn primary" href="#simulation">▶ Watch the simulation</a>
-      <a class="btn" href="#dashboard">Explore the dashboard</a>
-      <a class="btn" href="#report">Read the report</a>
+<div class="main">
+  <header class="topbar">
+    <div class="in">
+      <a class="wordmark" href="../../index.html">Abdulmajeed J. Alotaibi</a>
+      <nav aria-label="Main">
+        <ul class="topnav">
+          <li><a class="active" href="../../index.html#work" aria-current="true">Work</a></li>
+          <li><a href="../../index.html#about">About</a></li>
+          <li><a href="../../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-btn" type="button" aria-controls="sidebar" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</button>
     </div>
-    <div class="p-cover"><img src="img/simio-line.jpg" alt="3D view of the Simio model of the brick production line" width="1600" height="900"></div>
-  </div>
-</header>
+  </header>
 
-<section id="path" style="padding-top:24px">
-  <div class="wrap">
-    <div class="sec-head"><h2>The path</h2><p>Click a step to jump to it.</p></div>
-    <nav class="path" aria-label="Project steps">
-      <a class="stop" href="#analysis"><i></i><b>Data</b><span>Plant records</span></a>
-      <a class="stop" href="#analysis"><i></i><b>Statistics</b><span>Real or noise?</span></a>
-      <a class="stop" href="#analysis"><i></i><b>Reliability</b><span>Pick the machines</span></a>
-      <a class="stop sim" href="#simulation"><i></i><b>Simulation</b><span>Build the line</span></a>
-      <a class="stop sim" href="#simulation"><i></i><b>Validation</b><span>Match the plant</span></a>
-      <a class="stop sim" href="#scenarios"><i></i><b>What-If</b><span>Test the fixes</span></a>
-      <a class="stop dec" href="#plan"><i></i><b>Actions</b><span>Staged plan</span></a>
-    </nav>
-    <div class="key"><span>Real plant data</span><span class="s">Simulation</span><span class="d">Decision</span></div>
-  </div>
-</section>
-
-<section id="story">
-  <div class="wrap two">
-    <div class="prose">
-      <h3>Why this line</h3>
-      <p>The data came from a real heavy clay plant, recorded by its own MES. It covered the same line before and after a Lean Six Sigma program, which made it possible to ask a question plants often answer by feel: did the improvement work, and what should come next?</p>
-      <h3>The first surprise</h3>
-      <p>The headline numbers looked good: OEE was up, and breakdowns had dropped by about a quarter. But when I added up every unplanned stop, the line was losing almost as much time as before. The losses had moved, not disappeared. That changed the question from "did it improve?" to "where did the time go?"</p>
-    </div>
-    <aside class="card aside" aria-label="At a glance">
-      <h3>At a glance</h3>
-      <ul>
-        <li>Public dataset from a real heavy clay plant (Zenodo record 17855209, Evocon MES)</li>
-        <li>Two periods: before and after Lean Six Sigma</li>
-        <li>Tools: Power BI, Power Query, DAX, statistics, Simio</li>
-        <li>Output: dashboard, validated model, 10-page report</li>
-      </ul>
-    </aside>
-  </div>
-</section>
-
-<section id="analysis" style="padding-top:8px">
-  <div class="wrap two">
-    <div class="prose">
-      <h3>How I analyzed the plant data</h3>
-      <p>I loaded the plant's shift and stop records into Power BI and cleaned them in Power Query: correct data types, a Period field to split the two periods, and separate fact and date tables so both periods sat on the same basis. On that model I built the OEE, downtime and reliability measures in DAX.</p>
-      <p>Then I tested every important change before calling it real: a Welch t-test for OEE, a Mann–Whitney test for daily failures, and I-MR control charts for stability. The same records pointed to three critical machines, each for a different reason.</p>
-    </div>
-    <aside class="card aside" aria-label="What the data said">
-      <h3>What the plant data said</h3>
-      <ul>
-        <li>OEE rose 5.2 points (p = 0.039)</li>
-        <li>Breakdowns fell about a quarter, but total unplanned stops fell only 3.9%</li>
-        <li>Dryer: fails most often</li>
-        <li>Hacking Station: longest repairs</li>
-        <li>Extruder Press: failures rose after LSS</li>
-      </ul>
-    </aside>
-  </div>
-</section>
-
-<section id="dashboard">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Explore the dashboard</h2>
-      <p>Seven pages, from the plant's own data to the simulation and the plan. Click a page to open it full size.</p>
-    </div>
-    <div class="gallery" id="gallery">
-      <button data-i="0"><img src="img/dashboard-01-thumb.jpg" alt="Page 01: OEE before and after Lean Six Sigma" loading="lazy" width="800" height="450"><span class="cap"><b>Did the line perform better after Lean Six Sigma?</b><span><i class="dot"></i>01 · Real data</span></span></button>
-      <button data-i="1"><img src="img/dashboard-02-thumb.jpg" alt="Page 02: unplanned stops by type, reason and day" loading="lazy" width="800" height="450"><span class="cap"><b>Where is production time being lost?</b><span><i class="dot"></i>02 · Real data</span></span></button>
-      <button data-i="2"><img src="img/dashboard-03-thumb.jpg" alt="Page 03: repair times and station reliability" loading="lazy" width="800" height="450"><span class="cap"><b>Which machines matter most?</b><span><i class="dot"></i>03 · Real data</span></span></button>
-      <button data-i="3"><img src="img/dashboard-04-thumb.jpg" alt="Page 04: simulated versus real values" loading="lazy" width="800" height="450"><span class="cap"><b>Can we trust the simulation model?</b><span><i class="dot mix"></i>04 · Real vs simulation</span></span></button>
-      <button data-i="4"><img src="img/dashboard-05-thumb.jpg" alt="Page 05: simulated reliability before, after and with improvements" loading="lazy" width="800" height="450"><span class="cap"><b>How much did reliability improve, and what more is possible?</b><span><i class="dot sim"></i>05 · Simulation</span></span></button>
-      <button data-i="5"><img src="img/dashboard-06-thumb.jpg" alt="Page 06: failure-related downtime by What-If scenario" loading="lazy" width="800" height="450"><span class="cap"><b>Which station should be improved first?</b><span><i class="dot sim"></i>06 · Simulation</span></span></button>
-      <button data-i="6"><img src="img/dashboard-07-thumb.jpg" alt="Page 07: findings and staged recommendation" loading="lazy" width="800" height="450"><span class="cap"><b>What should the plant do next?</b><span><i class="dot mix"></i>07 · Real + simulation</span></span></button>
-    </div>
-  </div>
-</section>
-
-<section id="simulation" style="padding-top:8px">
-  <div class="wrap two">
-    <div>
-      <div class="video">
-        <video controls preload="metadata" poster="img/video-poster.jpg" playsinline>
-          <source src="media/simulation.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+  <main id="main">
+    <header class="p-hero">
+      <div class="wrap">
+        <div class="tags">Solo project · Manufacturing · 2026</div>
+        <h1>From Downtime to Decisions</h1>
+        <p class="lead">A heavy clay brick line after Lean Six Sigma, and the question of what to fix next.</p>
+        <div class="btns">
+          <a class="btn primary" href="#simulation">▶ Watch the simulation</a>
+          <a class="btn" href="#dashboard">Explore the dashboard</a>
+          <a class="btn" href="#report">Read the report</a>
+        </div>
+        <figure class="p-cover">
+          <img src="img/simio-facility.jpg" alt="3D view of the Simio model of the brick production line, from silo to packaging" width="1600" height="900" fetchpriority="high">
+          <figcaption>Simio model of the production line, built from the plant's failure and repair records.</figcaption>
+        </figure>
       </div>
-    </div>
-    <div class="prose">
-      <h3>Watch the simulation</h3>
-      <p>I rebuilt the line in Simio: nine machines in series from silo to packaging, about 6,000 bricks per hour, with failure and repair times taken from the plant's records.</p>
-      <p>Before testing anything, I ran the Before-LSS and After-LSS models 30 times each and compared them with the plant. Every value landed within ±10%, so both models were frozen and used as they were.</p>
-    </div>
-  </div>
-</section>
+    </header>
 
-<section id="scenarios">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Seven scenarios, one ranking</h2>
-      <p>Each scenario gave one, two or all three critical stations the same boost: 10% longer between failures and 10% shorter repairs. Each ran 100 times.</p>
-    </div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Rank</th><th>Improved stations</th><th class="num">Failure downtime (min/day)</th><th class="num">Saved vs After-LSS (min/day)</th></tr></thead>
-        <tbody>
-          <tr class="best"><td>1</td><td>All three</td><td class="num">37.19</td><td class="num">1.82</td></tr>
-          <tr><td>2</td><td>Extruder Press + Hacking Station</td><td class="num">37.71</td><td class="num">1.30</td></tr>
-          <tr><td>3</td><td>Hacking Station only</td><td class="num">37.84</td><td class="num">1.17</td></tr>
-          <tr><td>4</td><td>Extruder Press only</td><td class="num">38.15</td><td class="num">0.86</td></tr>
-          <tr><td>5</td><td>Dryer + Extruder Press</td><td class="num">38.74</td><td class="num">0.27</td></tr>
-          <tr><td>6</td><td>Dryer + Hacking Station</td><td class="num">38.99</td><td class="num">0.02</td></tr>
-          <tr><td>7</td><td>Dryer only</td><td class="num">39.67</td><td class="num">−0.66</td></tr>
-          <tr class="base"><td>—</td><td>After-LSS baseline (no change)</td><td class="num">39.01</td><td class="num">—</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="note">Simulation results, averages of 100 runs. The gap between best and worst scenario (2.48 min/day) is smaller than the run-to-run variation (95% confidence half-widths of about 6.4 to 7.4 min/day), and no scenario's gain is statistically significant. The table is an order of action, not a promise.</p>
-
-    <div id="plan" class="phases">
-      <div class="card"><div class="lab">PHASE 1 · START HERE</div><h3>Hacking Station</h3><p>Shorten the long repairs: spare parts ready, clear escalation. Alone, it delivered about two-thirds of the full gain.</p></div>
-      <div class="card"><div class="lab">PHASE 2</div><h3>Extruder Press</h3><p>Fewer failures: preventive maintenance and root-cause work on repeat stops. With Hacking, the strongest pair.</p></div>
-      <div class="card"><div class="lab">PHASE 3 · IF JUSTIFIED</div><h3>Dryer</h3><p>Condition monitoring and inspections, once its benefit can be weighed against its cost.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="judgment" style="padding-top:8px">
-  <div class="wrap">
-    <div class="sec-head"><h2>Decisions along the way</h2></div>
-    <div class="judg">
-      <div class="card"><h3>Keep real and simulated apart</h3><p>Every chart and sentence says which one it comes from, because mixing them is the easiest way to overstate a result.</p></div>
-      <div class="card"><h3>Validate before testing</h3><p>I compared the model with the plant first, then froze it, so the What-If results could not be tuned to look better.</p></div>
-      <div class="card"><h3>Rank, don't promise</h3><p>The gaps between scenarios were smaller than the model's own variation, so I present them as an order of action, not as guaranteed savings.</p></div>
-    </div>
-    <div class="two" style="margin-top:40px">
-      <div class="prose">
-        <h3>What the model can't do</h3>
-        <p>The simulation only covers breakdowns. It doesn't see speed losses, quality, or the handling and rack stops that grew after LSS. Failure times use real averages, but their shape was assumed. And without cost data, it can say where to start, not whether it pays.</p>
+    <section id="highlights" aria-labelledby="hl-title" style="padding-top:8px">
+      <div class="wrap">
+        <div class="sec-head"><h2 id="hl-title">Project Highlights</h2></div>
+        <div class="hl">
+          <div class="card real">
+            <h3>Real Plant Data</h3>
+            <ul>
+              <li><b>+5.2 pp</b><span>OEE improvement</span></li>
+              <li><b>−24.7%</b><span>Failure-related downtime</span></li>
+              <li><b>−24.6%</b><span>Daily failure frequency</span></li>
+            </ul>
+            <p class="fine">After-LSS vs Before-LSS, from my analysis of a public plant dataset. These changes came from the plant's Lean Six Sigma program; I analyzed them, I did not implement them.</p>
+          </div>
+          <div class="card sim">
+            <h3>Simulation Study</h3>
+            <ul>
+              <li><b>3</b><span>Critical stations</span></li>
+              <li><b>7</b><span>What-If scenarios</span></li>
+              <li><b>100</b><span>Replications per scenario</span></li>
+              <li><b>900</b><span>Total replications in the final comparison, including both baseline models</span></li>
+            </ul>
+            <p class="fine">Hypothetical scenarios tested in the simulation model, not measured plant outcomes.</p>
+          </div>
+        </div>
       </div>
-      <div class="prose">
-        <h3>If I did it again</h3>
-        <p>I would ask for cost data at the start, so the recommendation could end in a number, not a rule. I would also collect more repair records to fit the failure distributions properly, and look at the non-breakdown stops earlier, since that is where most of the lost time now sits.</p>
+    </section>
+
+    <section id="story" aria-labelledby="story-title">
+      <div class="wrap">
+        <div class="sec-head"><h2 id="story-title">Project Story</h2><p>Select a step to jump to it.</p></div>
+        <nav class="path" aria-label="Project steps">
+          <a class="stop" href="#background"><i></i><b>Data</b><span>Plant records</span></a>
+          <a class="stop" href="#analysis"><i></i><b>Statistics</b><span>Real or noise?</span></a>
+          <a class="stop" href="#analysis"><i></i><b>Reliability</b><span>Pick the machines</span></a>
+          <a class="stop sim" href="#simulation"><i></i><b>Simulation</b><span>Build the line</span></a>
+          <a class="stop sim" href="#validation"><i></i><b>Validation</b><span>Match the plant</span></a>
+          <a class="stop sim" href="#scenarios"><i></i><b>What-If</b><span>Test the fixes</span></a>
+          <a class="stop dec" href="#plan"><i></i><b>Actions</b><span>Staged plan</span></a>
+        </nav>
+        <div class="key"><span>Real plant data</span><span class="s">Simulation</span><span class="d">Decision</span></div>
+
+        <div class="two" id="background" style="margin-top:48px">
+          <div class="prose">
+            <h3>Why this line</h3>
+            <p>The data came from a real heavy clay plant, recorded by its own MES. It covered the same line before and after a Lean Six Sigma program, which made it possible to ask a question plants often answer by feel: did the improvement work, and what should come next?</p>
+            <h3>The first surprise</h3>
+            <p>The headline numbers looked good: OEE was up, and breakdowns had dropped by about a quarter. But when I added up every unplanned stop, the line was losing almost as much time as before. The losses had moved, not disappeared. That changed the question from "did it improve?" to "where did the time go?"</p>
+          </div>
+          <aside class="card aside" aria-label="At a glance">
+            <h3>At a glance</h3>
+            <ul>
+              <li>Public dataset from a real heavy clay plant (Zenodo record 17855209, Evocon MES)</li>
+              <li>Two periods: before and after Lean Six Sigma</li>
+              <li>Tools: Power BI, Power Query, statistical tests, Simio</li>
+              <li>Output: dashboard, validated simulation model, 10-page report</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="two" id="analysis" style="margin-top:40px">
+          <div class="prose">
+            <h3>How I analyzed the plant data</h3>
+            <p>I loaded the plant's shift and stop records into Power BI and prepared them in Power Query: correct data types, a Period field to split the two periods, and separate fact and date tables so both periods sat on the same basis. The dashboard then compares OEE, downtime and reliability indicators across the two periods.</p>
+            <p>I tested every important change before calling it real: a Welch t-test for OEE, a Mann–Whitney test for daily failures, and I-MR control charts for stability. The same records pointed to three critical stations, each for a different reason.</p>
+          </div>
+          <aside class="card aside" aria-label="What the plant data said">
+            <h3>What the plant data said</h3>
+            <ul>
+              <li>OEE rose 5.2 points (p = 0.039)</li>
+              <li>Breakdowns fell about a quarter, but total unplanned stops fell only 3.9%</li>
+              <li>Dryer: fails most often</li>
+              <li>Hacking Station: longest repairs</li>
+              <li>Extruder Press: failures rose after LSS</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div id="contribution" style="margin-top:48px">
+          <div class="card" style="padding:24px 26px">
+            <h3 style="font-size:20px;margin-bottom:6px">My contribution</h3>
+            <p class="muted" style="font-size:15.5px;margin-bottom:16px">Solo project, based on a public dataset. My role covered:</p>
+            <ul class="contrib">
+              <li>Analyzing production and downtime records</li>
+              <li>Interpreting manufacturing performance indicators</li>
+              <li>Identifying critical equipment</li>
+              <li>Developing the Simio simulation model</li>
+              <li>Comparing simulation results against real plant data</li>
+              <li>Evaluating reliability improvement scenarios</li>
+              <li>Developing a staged engineering recommendation</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="report">
-  <div class="wrap report">
-    <div class="doc"><img src="img/report-cover-01.jpg" alt="Cover of the report From Downtime to Decisions" loading="lazy"></div>
-    <div class="prose">
-      <h3>Read the report</h3>
-      <p>The full case study in 10 pages: the method, the statistical checks, and the staged plan.</p>
-      <div class="btns" style="margin-top:22px">
-        <a class="btn primary" href="files/From-Downtime-to-Decisions-Report.pdf" target="_blank" rel="noopener">Open report (PDF)</a>
-        <a class="btn" href="files/From-Downtime-to-Decisions-Report.pdf" download>Download</a>
-        <a class="btn" href="files/From-Downtime-to-Decisions-Dashboard.pdf" target="_blank" rel="noopener">Dashboard (PDF)</a>
+    <section id="dashboard" aria-labelledby="dash-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="dash-title">Explore the dashboard</h2>
+          <p>Seven pages exported from the Power BI dashboard, from the plant's own data to the simulation and the plan. Select a page to view it full screen and zoom in.</p>
+        </div>
+        <div class="gallery" id="gallery">
+          <button class="g-item" type="button" data-full="img/dashboard-01.jpg"><img src="img/dashboard-01-thumb.jpg" alt="Dashboard page 01: OEE before and after Lean Six Sigma" width="1200" height="675" loading="lazy"><span class="cap"><b>01 — Did the line perform better after Lean Six Sigma?</b><span><i class="dot"></i>Real plant data</span></span></button>
+          <button class="g-item" type="button" data-full="img/dashboard-02.jpg"><img src="img/dashboard-02-thumb.jpg" alt="Dashboard page 02: unplanned stops by type, reason and day" width="1200" height="675" loading="lazy"><span class="cap"><b>02 — Where is production time being lost?</b><span><i class="dot"></i>Real plant data</span></span></button>
+          <button class="g-item" type="button" data-full="img/dashboard-03.jpg"><img src="img/dashboard-03-thumb.jpg" alt="Dashboard page 03: repair times and station reliability" width="1200" height="675" loading="lazy"><span class="cap"><b>03 — Which machines matter most?</b><span><i class="dot"></i>Real plant data</span></span></button>
+          <button class="g-item" type="button" data-full="img/dashboard-04.jpg"><img src="img/dashboard-04-thumb.jpg" alt="Dashboard page 04: simulated versus real plant values" width="1200" height="675" loading="lazy"><span class="cap"><b>04 — Can we trust the simulation model?</b><span><i class="dot mix"></i>Real vs simulation</span></span></button>
+          <button class="g-item" type="button" data-full="img/dashboard-05.jpg"><img src="img/dashboard-05-thumb.jpg" alt="Dashboard page 05: simulated reliability before and after Lean Six Sigma and with improvements" width="1200" height="675" loading="lazy"><span class="cap"><b>05 — How much did reliability improve, and what more is possible?</b><span><i class="dot sim"></i>Simulation</span></span></button>
+          <button class="g-item" type="button" data-full="img/dashboard-06.jpg"><img src="img/dashboard-06-thumb.jpg" alt="Dashboard page 06: failure-related downtime by What-If scenario" width="1200" height="675" loading="lazy"><span class="cap"><b>06 — Which station should be improved first?</b><span><i class="dot sim"></i>Hypothetical simulation scenarios</span></span></button>
+          <button class="g-item" type="button" data-full="img/dashboard-07.jpg"><img src="img/dashboard-07-thumb.jpg" alt="Dashboard page 07: findings and staged recommendation" width="1200" height="675" loading="lazy"><span class="cap"><b>07 — What should the plant do next?</b><span><i class="dot mix"></i>Real data and simulation</span></span></button>
+        </div>
+        <p class="note">All seven pages are also available as one file: <a href="files/From-Downtime-to-Decisions-Dashboard.pdf" target="_blank" rel="noopener">dashboard PDF</a>.</p>
       </div>
+    </section>
+
+    <section id="simulation" aria-labelledby="sim-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="sim-title">Watch the simulation</h2>
+          <p>A short walkthrough of the Simio model, showing the production line from silo to packaging using failure and repair parameters based on actual plant records.</p>
+        </div>
+        <div class="video">
+          <video controls preload="metadata" playsinline poster="img/video-poster.jpg" aria-label="Simio simulation walkthrough of the brick production line">
+            <source src="media/simulation.mp4" type="video/mp4">
+            Your browser does not support embedded video. <a href="media/simulation.mp4">Download the simulation video (MP4)</a>.
+          </video>
+        </div>
+        <div class="two" style="margin-top:32px">
+          <div class="prose">
+            <h3>Building the model</h3>
+            <p>I rebuilt the line in Simio: nine machines in series from silo to packaging, about 6,000 bricks per hour, with failure and repair times taken from the plant's records.</p>
+          </div>
+          <div class="prose" id="validation">
+            <h3>Checking it against the plant</h3>
+            <p>Before testing anything, I ran the Before-LSS and After-LSS models 30 times each and compared them with the plant. Every value landed within ±10%, so both models were frozen and used as they were.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="scenarios" aria-labelledby="sc-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="sc-title">What-If scenarios</h2>
+          <p>Each scenario gave one, two or all three critical stations the same change: MTBF increased by 10% and MTTR reduced by 10%. Seven scenarios, 100 replications each.</p>
+        </div>
+        <p class="tcap" id="sc-cap">Simulation averages: failure-related downtime in min/day, 100 replications per scenario.</p>
+        <div class="table-wrap">
+          <table aria-describedby="sc-cap">
+            <thead><tr><th scope="col">Rank</th><th scope="col">Scenario</th><th scope="col" class="num">Average (min/day)</th><th scope="col" class="num">vs baseline</th></tr></thead>
+            <tbody>
+              <tr class="base"><td>—</td><td>After-LSS baseline (no change)</td><td class="num">39.01</td><td class="num">—</td></tr>
+              <tr class="best"><td>1</td><td>Combined improvement (all three stations)</td><td class="num">37.19</td><td class="num">−1.82</td></tr>
+              <tr><td>2</td><td>Extruder Press + Hacking Station</td><td class="num">37.71</td><td class="num">−1.30</td></tr>
+              <tr><td>3</td><td>Hacking Station only</td><td class="num">37.84</td><td class="num">−1.17</td></tr>
+              <tr><td>4</td><td>Extruder Press only</td><td class="num">38.15</td><td class="num">−0.86</td></tr>
+              <tr><td>5</td><td>Dryer + Extruder Press</td><td class="num">38.74</td><td class="num">−0.27</td></tr>
+              <tr><td>6</td><td>Dryer + Hacking Station</td><td class="num">38.99</td><td class="num">−0.02</td></tr>
+              <tr><td>7</td><td>Dryer only</td><td class="num">39.67</td><td class="num">+0.66</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">These are simulation averages, not measured plant results. The Combined scenario gave the lowest average failure-related downtime. The gap between the best and worst scenarios (2.48 min/day) is smaller than the run-to-run variation (95% confidence half-widths of about 6.4 to 7.4 min/day), so the ranking is not proof that one scenario is statistically better than another. It is an order of action, not a promised saving.</p>
+
+        <div id="plan" style="margin-top:36px">
+          <h3 style="font-size:20px">Where to start</h3>
+          <p class="muted" style="margin-top:8px;max-width:72ch">Combined gave the lowest average, but it means changing three stations at once. Hacking Station alone came closest of any single station, so it is the recommended starting point for a practical pilot.</p>
+          <div class="phases">
+            <div class="card"><div class="lab">PHASE 1 · START HERE</div><h3>Hacking Station</h3><p>Shorten the long repairs: spare parts ready and clear escalation. Best single-station result in the simulation (37.84 min/day).</p></div>
+            <div class="card"><div class="lab">PHASE 2</div><h3>Extruder Press</h3><p>Fewer failures: preventive maintenance and root-cause work on repeat stops. Together with Hacking, the strongest pair (37.71 min/day).</p></div>
+            <div class="card"><div class="lab">PHASE 3 · IF JUSTIFIED</div><h3>Dryer</h3><p>Condition monitoring and inspections, once its benefit can be weighed against its cost.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="limits" aria-labelledby="limits-title" style="padding-top:8px">
+      <div class="wrap">
+        <div class="sec-head"><h2 id="limits-title">Decisions along the way</h2></div>
+        <div class="judg">
+          <div class="card"><h3>Keep real and simulated apart</h3><p>Every chart and sentence says which one it comes from, because mixing them is the easiest way to overstate a result.</p></div>
+          <div class="card"><h3>Validate before testing</h3><p>I compared the model with the plant first, then froze it, so the What-If results could not be tuned to look better.</p></div>
+          <div class="card"><h3>Rank, don't promise</h3><p>The gaps between scenarios were smaller than the model's own variation, so I present them as an order of action, not as guaranteed savings.</p></div>
+        </div>
+        <div class="two" style="margin-top:40px">
+          <div class="prose">
+            <h3>What the model can't do</h3>
+            <p>The simulation only covers breakdowns. It doesn't see speed losses, quality, or the handling and rack stops that grew after LSS. Failure times use real averages, but their shape was assumed. And without cost data, it can say where to start, not whether it pays.</p>
+          </div>
+          <div class="prose">
+            <h3>If I did it again</h3>
+            <p>I would ask for cost data at the start, so the recommendation could end in a number, not a rule. I would also collect more repair records to fit the failure distributions properly, and look at the non-breakdown stops earlier, since that is where most of the lost time now sits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="report" aria-labelledby="report-title">
+      <div class="wrap report">
+        <div class="doc"><img src="img/report-cover.jpg" alt="Cover of the report From Downtime to Decisions" width="910" height="1287" loading="lazy"></div>
+        <div>
+          <h2 id="report-title">Read the report</h2>
+          <p>The complete engineering case study covering the data analysis, simulation methodology, validation, What-If scenarios, limitations, and staged improvement plan.</p>
+          <p class="note" style="margin-top:8px">PDF · 10 pages · 1.1 MB</p>
+          <div class="btns" style="margin-top:20px">
+            <a class="btn primary" href="files/From-Downtime-to-Decisions-Report.pdf" target="_blank" rel="noopener">Open in browser</a>
+            <a class="btn" href="files/From-Downtime-to-Decisions-Report.pdf" download="From-Downtime-to-Decisions_Abdulmajeed-J-Alotaibi.pdf">Download PDF</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Abdulmajeed J. Alotaibi · Industrial Engineering Portfolio</span>
+      <span class="links"><a href="../../index.html#work">← All Work</a><a href="https://www.linkedin.com/in/majalotaibi/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:mjealotaibi@gmail.com">Email</a><a href="#top">Back to top ↑</a></span>
     </div>
-  </div>
-</section>
-
-</main>
-
-<div class="wrap"><div class="pager"><a href="../../#work">← All work</a><span></span></div></div>
-
-<footer>
-  <div class="wrap"><span>© 2026 Abdulmajeed A. Alotaibi</span><span><a href="mailto:mjealotaibi@gmail.com">mjealotaibi@gmail.com</a> · <a href="https://www.linkedin.com/in/majalotaibi/" target="_blank" rel="noopener">LinkedIn</a></span></div>
-</footer>
-
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Dashboard page viewer">
-  <img id="lb-img" alt="">
-  <div class="bar">
-    <button id="lb-prev" aria-label="Previous page">← Prev</button>
-    <span id="lb-cap"></span>
-    <span style="display:flex;gap:10px"><button id="lb-next" aria-label="Next page">Next →</button><button id="lb-close" aria-label="Close viewer">Close ✕</button></span>
-  </div>
+  </footer>
 </div>
 
-<script>
-(function(){
-  var btns=[].slice.call(document.querySelectorAll('#gallery button'));
-  var lb=document.getElementById('lb'),img=document.getElementById('lb-img'),cap=document.getElementById('lb-cap');
-  var i=0,last=null;
-  function show(n){
-    i=(n+btns.length)%btns.length;
-    var b=btns[i];
-    img.src='img/dashboard-'+String(i+1).padStart(2,'0')+'.jpg';
-    img.alt=b.querySelector('img').alt;
-    cap.textContent=(i+1)+' / '+btns.length+' · '+b.querySelector('.cap b').textContent;
-  }
-  function open(n){last=document.activeElement;show(n);lb.classList.add('open');document.body.style.overflow='hidden';document.getElementById('lb-close').focus();}
-  function close(){lb.classList.remove('open');document.body.style.overflow='';if(last)last.focus();}
-  btns.forEach(function(b,n){b.addEventListener('click',function(){open(n);});});
-  document.getElementById('lb-prev').addEventListener('click',function(){show(i-1);});
-  document.getElementById('lb-next').addEventListener('click',function(){show(i+1);});
-  document.getElementById('lb-close').addEventListener('click',close);
-  lb.addEventListener('click',function(e){if(e.target===lb)close();});
-  document.addEventListener('keydown',function(e){
-    if(!lb.classList.contains('open'))return;
-    if(e.key==='Escape')close();
-    if(e.key==='ArrowRight')show(i+1);
-    if(e.key==='ArrowLeft')show(i-1);
-  });
-})();
-</script>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-labelledby="lb-title" hidden>
+  <div class="lb-top">
+    <span class="lb-title" id="lb-title"></span>
+    <button type="button" id="lb-close" aria-label="Close viewer">Close ✕</button>
+  </div>
+  <div class="lb-stage" id="lb-stage"><img id="lb-img" alt="" width="3200" height="1800"></div>
+  <div class="lb-bar">
+    <button type="button" id="lb-prev" aria-label="Previous page">← Previous</button>
+    <button type="button" id="lb-zoom" aria-pressed="false">Zoom in</button>
+    <button type="button" id="lb-next" aria-label="Next page">Next →</button>
+  </div>
+</div>
+<script src="../../assets/js/site.js" defer></script>
 </body>
 </html>
